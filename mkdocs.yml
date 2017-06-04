@@ -1,5 +1,7 @@
 site_name: Test of MkDocs
 pages:
-    - First: first.md
-    - Second: second.md
-    - Third: third.md
+    - Home: 'index.md'
+    - First: 'first.md'
+    - Second: 'second.md'
+    - Third: 'third.md'
+theme: 'readthedocs'
