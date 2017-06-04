@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Test of MkDocs
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+For full documentation see [mkdocs.org](http://mkdocs.org).
 
 ## Commands
 
