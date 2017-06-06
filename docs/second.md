@@ -1,5 +1,3 @@
-## Test for Lori
-
 ### Some list
 
 * point one
