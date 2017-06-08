@@ -5,3 +5,7 @@ pages:
     - Second: 'second.md'
     - Third: 'third.md'
 theme: 'readthedocs'
+repo_url: https://github.com/tombaker/test
+repo_name: 'Github'
+edit_uri: 'edit/master/docs/'
+site_description: 'Test of MkDocs'
