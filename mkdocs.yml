@@ -4,6 +4,7 @@ pages:
     - First: 'first.md'
     - Second: 'second.md'
     - Third: 'third.md'
+    - Fourth: '../sources/fourth.md'
 theme: 'readthedocs'
 repo_url: https://github.com/tombaker/test
 repo_name: 'Github'
