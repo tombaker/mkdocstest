@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Test of MkDocs\n\n\nFor full documentation see \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "text": "Test of MkDocs\n\n\nFor full documentation see \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create yet another project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
             "title": "Home"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "location": "/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "text": "mkdocs new [dir-name]  - Create yet another project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
             "title": "Commands"
         },
         {
@@ -39,6 +39,16 @@
             "location": "/third/",
             "text": "Third page",
             "title": "Third"
+        },
+        {
+            "location": "/../sources/fourth/",
+            "text": "Third page",
+            "title": "Fourth"
+        },
+        {
+            "location": "/notebook/",
+            "text": "{\n \"metadata\": {\n  \"name\": \"\"\n },\n \"nbformat\": 3,\n \"nbformat_minor\": 0,\n \"worksheets\": [\n  {\n   \"cells\": [\n    {\n     \"cell_type\": \"heading\",\n     \"level\": 3,\n     \"metadata\": {},\n     \"source\": [\n      \"Installing PyYaml\"\n     ]\n    },\n    {\n     \"cell_type\": \"markdown\",\n     \"metadata\": {},\n     \"source\": [\n      \"2013-10-19 Saturday morning\\n\",\n      \"\\n\",\n      \"\n\\n\",\n      \"curl -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain  - downloaded to $MACSOFT\\n\",\n      \"sudo cp -vi git-credential-osxkeychain /usr/local/bin\\n\",\n      \"sudo chmod u+x /usr/local/bin/git-credential-osxkeychain\\n\",\n      \"git config --global credential.helper osxkeychain\\n\",\n      \"~/cpu/agitrepos/pyyaml> python setup.py install\\n\",\n      \"\n\"\n     ]\n    },\n    {\n     \"cell_type\": \"heading\",\n     \"level\": 3,\n     \"metadata\": {},\n     \"source\": [\n      \"Rules file\"\n     ]\n    },\n    {\n     \"cell_type\": \"markdown\",\n     \"metadata\": {},\n     \"source\": [\n      \"Here is an example Rules file\\n\",\n      \"\\n\",\n      \"\n\\n\",\n      \"0|.|lines|HUH|\\n\",\n      \"1|^FTMP|HUH|a| # Comment\\n\",\n      \"1|^=====|HUH|a|\\n\",\n      \"1|^====$|HUH|a|\\n\",\n      \"\n\"\n     ]\n    },\n    {\n     \"cell_type\": \"markdown\",\n     \"metadata\": {},\n     \"source\": [\n      \"How about\\n\",\n      \"\n\\n\",\n      \"-\\n\",\n      \"  in_field:       1\\n\",\n      \"  match_on:       Test#test\\n\",\n      \"  in_sourcefile:  My File.txt\\n\",\n      \"  move_to_target: My File2.txt\\n\",\n      \"  sort_target_on: 3\\n\",\n      \"\n\"\n     ]\n    },\n    {\n     \"cell_type\": \"code\",\n     \"collapsed\": false,\n     \"input\": [\n      \"import yaml\\n\",\n      \"rules = yaml.load(\\\"\\\"\\\"\\n\",\n      \"---\\n\",\n      \"-\\n\",\n      \"  in_field:       1\\n\",\n      \"  match_on:       Test#test\\n\",\n      \"  in_sourcefile:  My File.txt\\n\",\n      \"  move_to_target: My File2.txt\\n\",\n      \"  sort_target_on: 3\\n\",\n      \"-\\n\",\n      \"  in_field:       2\\n\",\n      \"  match_on:       NOW\\n\",\n      \"  in_sourcefile:  a\\n\",\n      \"  move_to_target: b\\n\",\n      \"  sort_target_on: 3\\n\",\n      \"\\\"\\\"\\\")\\n\",\n      \"print rules\"\n     ],\n     \"language\": \"python\",\n     \"metadata\": {},\n     \"outputs\": [\n      {\n       \"output_type\": \"stream\",\n       \"stream\": \"stdout\",\n       \"text\": [\n        \"[{'match_on': 'Test#test', 'sort_target_on': 3, 'in_field': 1, 'in_sourcefile': 'My File.txt', 'move_to_target': 'My File2.txt'}, {'match_on': 'NOW', 'sort_target_on': 3, 'in_field': 2, 'in_sourcefile': 'a', 'move_to_target': 'b'}]\\n\"\n       ]\n      }\n     ],\n     \"prompt_number\": 5\n    },\n    {\n     \"cell_type\": \"code\",\n     \"collapsed\": false,\n     \"input\": [\n      \"for rule in rules:\\n\",\n      \"    for key, value in rule.iteritems():\\n\",\n      \"        print \\\"match_on is \\\" rule['match_on']\"\n     ],\n     \"language\": \"python\",\n     \"metadata\": {},\n     \"outputs\": [\n      {\n       \"ename\": \"SyntaxError\",\n       \"evalue\": \"invalid syntax (\n, line 3)\",\n       \"output_type\": \"pyerr\",\n       \"traceback\": [\n        \"\\u001b[0;36m  File \\u001b[0;32m\\\"\n\\\"\\u001b[0;36m, line \\u001b[0;32m3\\u001b[0m\\n\\u001b[0;31m    print \\\"match_on is \\\" rule['match_on']\\u001b[0m\\n\\u001b[0m                            ^\\u001b[0m\\n\\u001b[0;31mSyntaxError\\u001b[0m\\u001b[0;31m:\\u001b[0m invalid syntax\\n\"\n       ]\n      }\n     ],\n     \"prompt_number\": 16\n    },\n    {\n     \"cell_type\": \"code\",\n     \"collapsed\": false,\n     \"input\": [\n      \"for rule in rules:\\n\",\n      \"    for key in rule:\\n\",\n      \"        key = rule[key]\\n\",\n      \"        print key + key + key\"\n     ],\n     \"language\": \"python\",\n     \"metadata\": {},\n     \"outputs\": [\n      {\n       \"output_type\": \"stream\",\n       \"stream\": \"stdout\",\n       \"text\": [\n        \"Test#testTest#testTest#test\\n\",\n        \"9\\n\",\n        \"3\\n\",\n        \"My File.txtMy File.txtMy File.txt\\n\",\n        \"My File2.txtMy File2.txtMy File2.txt\\n\",\n        \"NOWNOWNOW\\n\",\n        \"9\\n\",\n        \"6\\n\",\n        \"aaa\\n\",\n        \"bbb\\n\"\n       ]\n      }\n     ],\n     \"prompt_number\": 20\n    },\n    {\n     \"cell_type\": \"code\",\n     \"collapsed\": false,\n     \"input\": [],\n     \"language\": \"python\",\n     \"metadata\": {},\n     \"outputs\": []\n    }\n   ],\n   \"metadata\": {}\n  }\n ]\n}",
+            "title": "Notebook"
         }
     ]
 }
