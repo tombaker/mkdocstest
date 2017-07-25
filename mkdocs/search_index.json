@@ -22,8 +22,13 @@
         },
         {
             "location": "/first/",
-            "text": "First page",
+            "text": "First page\n\n\nAdd some text.",
             "title": "First"
+        },
+        {
+            "location": "/first/#first-page",
+            "text": "Add some text.",
+            "title": "First page"
         },
         {
             "location": "/second/",
