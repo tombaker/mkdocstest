@@ -1,0 +1,7 @@
+,Property,Property label,Value,Value label,Mand?,Repeat?
+wikidata-filmfestival,P31,instance of,Q220505,film festival,X,X
+,P571,inception,,,X,
+,P276,location,,,X,
+,P2257,time period of periodically occurring event,,,X,
+,P856,official website,,,X,
+,P1705,native label,,,X,
